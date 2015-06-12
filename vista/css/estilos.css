@@ -216,3 +216,11 @@ ul li span
 	display: inline-block;
 	vertical-align: middle;
 }
+.notify{
+	display: none;
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	width: auto;
+	background: red;
+}
