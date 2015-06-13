@@ -48,13 +48,16 @@ function clickderecho(){
 }
 function modificar(id)
 {
-	// para especial para los formularios
 	$.ajax({
-		url: "controles/f_modificar.php",
+		url: "controles/f_modificar.php?id="+id,
 		type: 'POST',
-		data: id,
-		success: function (mensaje) {
-			$("#modificar").remove(); //para que no quede el section #modificar anterior cada vez que se modifica un archivo
+		data: null,
+		success:function(mensaje) {
+			$("#modificar").show(100);
+			if($("#modificar").is(":visible"))
+			{
+			 $("#modificar").remove(); //para que no quede el section #modificar anterior cada vez que se modifica un archivo
+			}
 			$("body").append(mensaje);
 		}
 	});

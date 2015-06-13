@@ -184,6 +184,7 @@ ul li span
 	color:#fff;
 	margin-right: 5px;
 }
+
 #formularios form textarea
 {
 	font-family: "district";
@@ -193,7 +194,7 @@ ul li span
 	font-size: 1.2em;
 	resize: none;
 }
-#formularios
+#formularios,#modificar
 {
 	background: rgba(0,0,0,.4);
 	position: fixed;
@@ -203,7 +204,12 @@ ul li span
 	display: none;
 	z-index: 100000000000;
 }
-#formularios form 
+#modificar
+{
+	display: block;
+	height: 100%;
+}
+#formularios form
 {
 	position: absolute;
 	text-align: left;
@@ -214,6 +220,48 @@ ul li span
 	background: #FF0055;
 	padding: 1em;
 }
+#modificar h3
+{
+	background: #eee;
+	color:#1A1A1A;
+	width: 60%;
+	margin: 0 auto;
+	padding: 1em;
+	text-align: center;
+}
+
+#modificar-archivo
+{
+	margin-top: 7%;
+}
+#modificar form 
+{
+	background: #eee;
+	margin: 0 auto;
+	width: 60%;
+	min-height: 40%;
+}
+
+#modificar #numero
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 3%;
+	min-height: 50%;
+	background: #ccc;
+	color:#1a1a1a;
+	
+}
+#modificar form textarea
+{
+	background: #fff;
+	width: 96%;
+	display: inline-block;
+	vertical-align: top;
+	height: 50%;
+	padding-left: 5px;
+}
+
 #formularios legend
 {
 	color:#fff;
@@ -224,6 +272,7 @@ ul li span
 	padding: .3em;
 	height: 30px;
 }
+
 #menu #pico
 {
 	width: 0;
