@@ -9,7 +9,7 @@
 			<div><label>Tipo de Documento: </label></div>
 			<div class="inline-block">
 				<label>html</label>
-				<input type="radio" value="html" name="tipo">
+				<input type="radio" checked="checked" value="html" name="tipo">
 			</div>
 			<div class="inline-block">
 				<label>texto</label>
