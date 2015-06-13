@@ -26,6 +26,8 @@
 	</form>
 </section>
 <section id="formularios" class="subir-archivo">
-		<form action="<?= controles_url ?>f_subirarchivo.php" id="subirForm" class="arr-drop"></form>
+		<form action="<?= controles_url ?>f_subirarchivo.php" method="POST" id="subirForm" class="arr-drop dropzone">
+			
+		</form>
 	</div>
 </section>
