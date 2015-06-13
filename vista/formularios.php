@@ -1,9 +1,9 @@
-<section id="formularios">
-	<form id="formCrear" class="subtmitForm" action="<?= controles_url ?>f_crear.php" method="post">
+<section id="formularios" class="crear-archivo">
+	<form id="form" class="subtmitForm" action="<?= controles_url ?>f_crear.php" method="post">
 		<legend>Crear Documento</legend>
 		<div>
 			<label>Nombre: </label>
-			<input type="text" name="nombre" placeholder="Probando" />
+			<input type="text" name="nombre" placeholder="Nombre del archivo" />
 		</div>
 		<div>
 			<div><label>Tipo de Documento: </label></div>
@@ -17,11 +17,15 @@
 			</div>
 			<div>
 				<div><label>Primer contenido (Opcional)</label></div>
-				<div><textarea placeholder="probando" name="contenido"></textarea></div>
+				<div><textarea placeholder="Contenido del archivo" name="contenido"></textarea></div>
 			</div>
 			<div>
 				<input type="submit" value="Crear Documento" />
 			</div>
 		</div>
 	</form>
+</section>
+<section id="formularios" class="subir-archivo">
+		<form action="<?= controles_url ?>f_subirarchivo.php" id="subirForm" class="arr-drop"></form>
+	</div>
 </section>

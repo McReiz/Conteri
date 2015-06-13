@@ -4,13 +4,6 @@ function ocultarMenu(){
 	}
 };
 function clickderecho(){
-	$("button").on("click",function(){
-		id = $(this).attr("id");
-		
-		if(id == "crear"){
-			$("#formularios").show(100);
-		}
-	});
 
 	$("#archivos").on("mousedown",function(event){
 		switch(event.which){
@@ -78,11 +71,21 @@ function formSubmit(event){
 	});
 	return false;
 }
+function droparch(){
+	$('.subir-archivo .arr-drop').dropzone({url: "controles/f_subirarchivo.php"});
+
+}
 $(document).on("ready",function()
 {  
 // Ojos que no leen, corazón que no siente... (deja de poner ridiculeses en los comentarios xD)
 
-		
+	$("button").on("click",function(event){
+		event.preventDefault();
+		var data = $(this).attr("data-form"); //tomo el valor del atrributa data-form
+		var formulario = $("."+ data); // lo convierto en un selector "class" por asi decirlo
+
+		formulario.show(100); // muestrame el "class" almacenado en la var formulario
+	});
 	$(document).bind("contextmenu",function(event)
 	{
 		return false;
@@ -104,5 +107,6 @@ $(document).on("ready",function()
 	// }
 		
 	$('.subtmitForm').on("submit", formSubmit);
+	droparch();
 	clickderecho();
 });	
