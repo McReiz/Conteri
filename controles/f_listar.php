@@ -17,7 +17,7 @@ while ($archivo = readdir($directorio)) //obtenemos un archivo y luego otro suce
 		}
     ?>
 
-    	<article data-tipo-archivo="<?=$extension?>" data-archivo-id="1">
+    	<article data-tipo-archivo="<?=$extension?>" data-archivo-id="<?=$archivo?>">
 				<input type="checkbox" checked="cheked" />
 				<img src="<?=$img?>">
 				<div>

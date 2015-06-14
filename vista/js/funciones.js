@@ -39,8 +39,26 @@ function clickderecho(){
 					$(this).addClass("marcado");
 				}
 				$("#menu").css({left:dLeft, top: dTop});
+				id = $(this).attr("data-archivo-id");
 				$("#menu").show();
+				$("button").attr("data-form","modificar").attr("data-archivo-id",id);
 			break;
+		}
+	});
+}
+function modificar(id)
+{
+	$.ajax({
+		url: "controles/f_modificar.php?id="+id,
+		type: 'POST',
+		data: null,
+		success:function(mensaje) {
+			$("#modificar").show(100);
+			if($("#modificar").is(":visible"))
+			{
+			 $("#modificar").remove(); //para que no quede el section #modificar anterior cada vez que se modifica un archivo
+			}
+			$("body").append(mensaje);
 		}
 	});
 }
@@ -86,13 +104,15 @@ $(document).on("ready",function()
 	$("button").on("click",function(event){
 		event.preventDefault();
 		var data = $(this).attr("data-form"); //tomo el valor del atrributa data-form
+		var id   = $(this).attr("data-archivo-id");
 		var formulario = $("."+ data); // lo convierto en un selector "class" por asi decirlo
-
+		if(data == "modificar"){modificar(id);}
 		formulario.show(100); // muestrame el "class" almacenado en la var formulario
-	});
+		ocultarMenu();
+	}); 
 	$(document).bind("contextmenu",function(event)
 	{
-		return false;
+		// return false;
 		//impedir click derecho
 	});
 
