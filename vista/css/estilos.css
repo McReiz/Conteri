@@ -203,7 +203,7 @@ ul li span
 	display: none;
 	z-index: 100000000000;
 }
-#formularios form 
+#formularios form, #formularios form 
 {
 	position: absolute;
 	text-align: left;

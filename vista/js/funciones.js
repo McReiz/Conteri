@@ -72,7 +72,11 @@ function formSubmit(event){
 	return false;
 }
 function droparch(){
-	//$('.subir-archivo').dropzone({url: "controles/f_subirarchivo.php", paramName: "filename"});
+	Dropzone.autoDiscover = false;
+	$('.subir-archivo .form').dropzone({
+		url: "controles/f_subirarchivo.php", 
+		
+	});
 
 }
 $(document).on("ready",function()
