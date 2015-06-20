@@ -7,11 +7,11 @@
 		//Base de datos
 		 "server" => "localhost",
 		 "user"   => "root",
-		 "pass"   => "Reiz",
+		 "pass"   => "",
 		 "db"     => "conteri",
 		 //Ubicación
-		 "url"    => "http://localhost/Conteri/",
-		 "dirRoot" => "C:/xampp/htdocs/Conteri/"
+		 "url"    => "http://localhost/",
+		 "dirRoot" => "C:/xampp/htdocs/"
   		);
 
 	//Constantes
